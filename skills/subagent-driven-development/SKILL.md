@@ -205,6 +205,14 @@ the implementer that got stuck.
 omitted model inherits your session's model — often the most capable and
 most expensive — which silently defeats this section.
 
+**Always specify the effort explicitly too.** An omitted effort inherits
+your session's effort — often xhigh or max — and a cheap or mid-tier model at
+xhigh is slower and dearer than a capable one at high. Implementer whose plan
+text has the complete code: `low`. Implementer working from prose, reviewers
+and scoped re-reviews: `medium` (`high` for a large or risky diff). Final
+whole-branch review and fix-loop rounds 4-5: `high`. Never run a cheap or
+mid-tier model above `high`; move up a model tier instead.
+
 **Turn count beats token price.** Wall-clock and context cost scale with how
 many turns a subagent takes, and the cheapest models routinely take 2-3× the
 turns on multi-step work — costing more overall. Use a mid-tier model as the
